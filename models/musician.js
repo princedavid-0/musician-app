@@ -41,7 +41,7 @@ class Musician {
   // modify existing musician or add a new one to storage
   putMusician(id, musician, callback) {
     if (id !== musician.firstName.toLowerCase()) {
-      return callback("Musician id in request path and body do not match.");
+      return callback("The Musician id in request path and body do not match.");
     }
     const newStore = Object.assign({}, this.store);
     if(this.isMusicianInStore(id)) {
